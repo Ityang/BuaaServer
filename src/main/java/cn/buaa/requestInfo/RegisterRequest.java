@@ -21,8 +21,6 @@ public class RegisterRequest {
     @NotNull(message = "loginPass属性不能为空！")
     public String loginPass;
 
-    @NotEmpty(message = "imei属性不能为空！")
-    @NotNull(message = "imei属性不能为空！")
     public String imei;
 
     public String phoneCode;

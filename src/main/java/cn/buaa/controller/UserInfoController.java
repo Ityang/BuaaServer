@@ -45,10 +45,6 @@ public class UserInfoController extends BaseController {
             return jsonErrorResult(Config.PARAM_ERROR, "参数不能为空！");
         }
 
-        if (StringUtil.isNull(request.imei)) {
-            return jsonErrorResult(Config.PARAM_NOT_NULL, "设备参数不能为空！");
-        }
-
         if (StringUtil.isNull(request.loginName)) {
             return jsonErrorResult(Config.PARAM_NOT_NULL, "用户名不能为空！");
         }
@@ -85,13 +81,8 @@ public class UserInfoController extends BaseController {
      */
     @RequestMapping(value = "/register", method = RequestMethod.POST, produces = {"application/json;charset=utf-8"})
     public Object register(@RequestBody RegisterRequest request) {
-
         if (request == null) {
             return jsonErrorResult(Config.PARAM_ERROR, "参数不能为空！");
-        }
-
-        if (StringUtil.isNull(request.imei)) {
-            return jsonErrorResult(Config.PARAM_NOT_NULL, "设备参数不能为空！");
         }
 
         UserInfo userInfo = new UserInfo();
@@ -114,7 +105,7 @@ public class UserInfoController extends BaseController {
                 return jsonErrorResult(Config.USER_HAS_SAVE, "注册失败");
             }
 
-            return jsonSuccessResult("注册成功！");
+            return jsonSuccessResult(Config.NETWORK_SUCCESS,"注册成功！");
         }
     }
 }
