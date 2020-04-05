@@ -82,6 +82,9 @@
     insert into `subject` (UID,TITLE,INFO,TYPE,`status`,CREATED_AT)
     values (#{uid},#{title},#{info},#{type},#{status},now())
   </insert>
+  <update id="updateSubject">
+    update `subject` s SET s.TITLE = #{title},s.info = #{info},s.status = #{status}, s.UPDATED_AT = now() where s.id = #{id}
+  </update>
   <insert id="insertQuestionBank" useGeneratedKeys="true" keyProperty="id">
     insert into question_bank (subject_id,subject_name,subject_type,`status`,create_user,create_time)
     values (#{subjectId},#{subjectName},#{subjectType},#{status},#{createUser},now())
