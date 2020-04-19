@@ -2,10 +2,6 @@ package cn.buaa.model;
 
 import lombok.Data;
 
-/**
- * @autor wangy
- * @date 2020/4/4 17:41
- **/
 @Data
 public class QuestionAnswer {
 

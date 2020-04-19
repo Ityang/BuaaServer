@@ -145,15 +145,32 @@ public class SubjectController extends BaseController {
 
     /**
      * 根据用户ID、问卷ID验证用户是否已经填写过此问卷
+     *
      * @return code:0、该用户未参与问卷  1、该用户已参与此问卷
      */
     @RequestMapping("/checkUserAnswer")
-    public JsonResult checkUserAnswer(@RequestBody UserAnswer userAnswer){
+    public JsonResult checkUserAnswer(@RequestBody UserAnswer userAnswer) {
         // todo 这里做新增
-        userAnswer = subjectService.checkUserAnswer(userAnswer);
-        if(userAnswer==null){
+        List<UserAnswer> userAnswerList = new ArrayList<>();
+        userAnswerList = subjectService.checkUserAnswerById(userAnswer);
+
+        if (userAnswerList.size() > 0) {
+            return jsonSuccessResult(1, "success");
+        } else {
             return jsonSuccessResult(0, "success");
         }
-        return jsonSuccessResult(1, "success");
+    }
+
+    /**
+     * 问卷统计
+     */
+    @RequestMapping("/getStatistics")
+    public JsonResult getStatistics(@RequestBody UserAnswer userAnswer) {
+
+        // todo 这里做新增
+        List<UserAnswer> userAnswerList = new ArrayList<>();
+        userAnswerList = subjectService.getStatistics(userAnswer);
+
+        return jsonSuccessResult(userAnswerList, "success");
     }
 }

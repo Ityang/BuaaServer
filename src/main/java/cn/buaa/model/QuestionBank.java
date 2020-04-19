@@ -4,10 +4,10 @@ import lombok.Data;
 
 import java.util.List;
 
+
 /**
- * @autor wangy
- * @date 2020/4/4 17:38
- **/
+ * @author Bob
+ */
 @Data
 public class QuestionBank {
 

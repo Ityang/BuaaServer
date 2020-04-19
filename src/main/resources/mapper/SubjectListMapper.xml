@@ -116,4 +116,33 @@
       ua.user_id = #{userId}
       AND ua.subject_id = #{subjectId}
   </select>
+
+  <select id="checkUserAnswerById" resultType="cn.buaa.model.UserAnswer">
+    SELECT
+      ua.id,
+      ua.subject_id subjectId,
+      ua.user_id userId,
+      ua.question_id questionId,
+      ua.answer,
+      ua.`status` status,
+      ua.create_time createTime
+    FROM
+      user_answer ua
+    WHERE
+      ua.user_id = #{userId}
+      AND ua.subject_id = #{subjectId}
+  </select>
+
+  <select id="getStatistics" resultType="cn.buaa.model.UserAnswer">
+    SELECT
+      DISTINCT ua.user_id userId,
+      ua.remark remark,
+      ua.create_time createTime
+    FROM
+      user_answer ua
+    WHERE
+     ua.subject_id = #{subjectId}
+     ORDER BY ua.create_time DESC
+  </select>
+
 </mapper>

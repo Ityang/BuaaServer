@@ -10,9 +10,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @autor wangy
- * @date 2020/4/4 17:36
- **/
+ * @author Bob
+ */
 @Data
 public class Subject {
     /**

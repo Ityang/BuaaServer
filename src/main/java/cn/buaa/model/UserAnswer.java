@@ -3,9 +3,8 @@ package cn.buaa.model;
 import lombok.Data;
 
 /**
- * @autor wangy
- * @date 2020/4/5 14:53
- **/
+ * @author Bob
+ */
 @Data
 public class UserAnswer {
 

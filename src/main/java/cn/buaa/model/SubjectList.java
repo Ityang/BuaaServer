@@ -3,6 +3,9 @@ package cn.buaa.model;
 import java.util.Date;
 import javax.persistence.*;
 
+/**
+ * @author Bob
+ */
 @Table(name = "subject")
 public class SubjectList {
     /**

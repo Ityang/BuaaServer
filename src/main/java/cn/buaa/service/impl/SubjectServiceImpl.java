@@ -93,4 +93,15 @@ public class SubjectServiceImpl implements SubjectService {
     public UserAnswer checkUserAnswer(UserAnswer userAnswer) {
         return subjectListMapper.checkUserAnswer(userAnswer);
     }
+
+
+    @Override
+    public List<UserAnswer> checkUserAnswerById(UserAnswer userAnswer) {
+        return subjectListMapper.checkUserAnswerById(userAnswer);
+    }
+
+    @Override
+    public List<UserAnswer> getStatistics(UserAnswer userAnswer) {
+        return subjectListMapper.getStatistics(userAnswer);
+    }
 }

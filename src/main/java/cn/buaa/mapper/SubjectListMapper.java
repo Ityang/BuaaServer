@@ -38,4 +38,8 @@ public interface SubjectListMapper extends MyMapper<SubjectList> {
     void saveUserAnswer(UserAnswer userAnswer);
 
     UserAnswer checkUserAnswer(UserAnswer userAnswer);
+
+    List<UserAnswer> checkUserAnswerById(UserAnswer userAnswer);
+
+    List<UserAnswer> getStatistics(UserAnswer userAnswer);
 }
