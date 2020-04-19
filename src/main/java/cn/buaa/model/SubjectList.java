@@ -68,6 +68,11 @@ public class SubjectList {
     private Date deletedAt;
 
     /**
+     */
+    @Column(name = "status")
+    private Integer status;
+
+    /**
      * 获取主键
      *
      * @return ID - 主键
@@ -245,5 +250,13 @@ public class SubjectList {
      */
     public void setDeletedAt(Date deletedAt) {
         this.deletedAt = deletedAt;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

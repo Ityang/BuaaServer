@@ -29,6 +29,10 @@ public class SubjectServiceImpl implements SubjectService {
     }
 
     @Override
+    public List<SubjectList> queryById(int uid) {
+        return subjectListMapper.queryById(uid);
+    }
+    @Override
     public Subject getSubjectDetailBySubjectId(String subjectId) {
         return subjectListMapper.getSubjectDetailBySubjectId(subjectId);
     }

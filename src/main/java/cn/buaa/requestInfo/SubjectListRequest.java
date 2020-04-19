@@ -13,8 +13,6 @@ import javax.validation.constraints.NotNull;
 @ToString
 public class SubjectListRequest {
 
-    @NotEmpty(message = "uid不能为空！")
-    @NotNull(message = "uid不能为空！")
     public Integer uid;
 
     @NotEmpty(message = "page不能为空！")

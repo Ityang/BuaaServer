@@ -38,7 +38,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="user_feedback" domainObjectName="FeedBack"  enableCountByExample="false" enableUpdateByExample="false"
+        <table tableName="subject" domainObjectName="SubjectList"  enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
             <!--mysql 配置-->

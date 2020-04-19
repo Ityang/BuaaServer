@@ -11,6 +11,6 @@ import java.util.Map;
 
 public interface FeedBackMapper extends MyMapper<FeedBack> {
 
-    @Select("insert into users_feedback(user_id,info,create_time) values (#{userId},#{info},#{created_at})")
+    @Select("insert into user_feedback(user_id,info,create_time) values (#{userId},#{info},#{created_at})")
     public List<Map<String, Object>> add(@Param("userId") Integer userId, @Param("info") String info, @Param("created_at") Date created_at);
 }

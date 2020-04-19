@@ -12,6 +12,7 @@
     <result column="INFO" property="info" jdbcType="VARCHAR" />
     <result column="NUMBER" property="number" jdbcType="INTEGER" />
     <result column="TYPE" property="type" jdbcType="SMALLINT" />
+    <result column="status" property="type" jdbcType="SMALLINT" />
     <result column="CREATED_AT" property="createdAt" jdbcType="TIMESTAMP" />
     <result column="UPDATED_AT" property="updatedAt" jdbcType="TIMESTAMP" />
     <result column="DELETED_AT" property="deletedAt" jdbcType="TIMESTAMP" />

@@ -33,6 +33,8 @@ public interface SubjectService {
 
     List<SubjectList> queryByTitle(String title);
 
+    List<SubjectList> queryById(int uid);
+
     Subject getSubjectDetailBySubjectId(String subjectId);
 
     Subject save(Subject subject);

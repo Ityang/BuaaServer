@@ -12,11 +12,14 @@ import java.util.List;
  */
 public interface SubjectListMapper extends MyMapper<SubjectList> {
 
-    @Select("SELECT * FROM subject WHERE TITLE regexp #{title}")
+    @Select("SELECT * FROM subject WHERE TITLE regexp #{title} and status =1")
     public List<SubjectList> queryByTitle(@Param("title") String title);
 
-    @Select("SELECT * FROM subject ")
+    @Select("SELECT * FROM subject where status=1")
     public List<SubjectList> query();
+
+    @Select("SELECT * FROM subject where uid= #{uid}")
+    public List<SubjectList> queryById(@Param("uid")int uid);
 
     Subject getSubjectDetailBySubjectId(String subjectId);
 
